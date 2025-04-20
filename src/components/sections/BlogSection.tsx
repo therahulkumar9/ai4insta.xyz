@@ -39,7 +39,8 @@ export const BlogSection = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <MessageSquare className="w-8 h-8 text-pink-600 dark:text-pink-400" />
+            {/* <MessageSquare className="w-8 h-8 text-pink-600 dark:text-pink-400" /> */}
+          <span className="text-3xl md:text-4xl">💡</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-gray-100">
               Tips & Tricks
             </h2>
