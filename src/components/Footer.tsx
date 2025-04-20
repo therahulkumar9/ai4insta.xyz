@@ -106,7 +106,7 @@ export const Footer = () => {
             </div>
             <div className="flex items-center gap-4 text-gray-400 dark:text-gray-600">
               <a
-                href="https://x.com/therahulkumar9"
+                href="https://x.com/ai4insta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-600 transition-colors"
@@ -114,7 +114,7 @@ export const Footer = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/therahulkumar9"
+                href="https://linkedin.com/in/ai4insta"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-600 transition-colors"
@@ -128,7 +128,7 @@ export const Footer = () => {
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com/therahulkumar9"
+                href="https://instagram.com/ai4insta.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-600 transition-colors"
