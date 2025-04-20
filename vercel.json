@@ -1,6 +1,8 @@
 {
     "version": 2,
     "rewrites": [
+      { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+      { "source": "/robots.txt", "destination": "/robots.txt" },
       { "source": "/youtube", "destination": "/index.html" },
       { "source": "/youtube/:path*", "destination": "/index.html" },
       { "source": "/insta-caption-ai", "destination": "/index.html" },
