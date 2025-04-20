@@ -14,32 +14,76 @@ export const TestimonialsSection = () => {
     {
       name: "Sarah Johnson",
       role: "Content Creator",
-      text: "AI4Insta has transformed how I create captions for my posts. It's a game-changer!",
+      text: "AI4Insta has completely revolutionized how I craft captions. It’s a must-have for anyone looking to step up their Instagram game!",
       rating: 5,
       image: "https://randomuser.me/api/portraits/women/1.jpg"
     },
     {
-      name: "Mike Williams",
+      name: "Rahul Kumar",
       role: "Social Media Manager",
-      text: "The caption generation tool saves me hours of work every week. Highly recommended!",
+      text: "This tool has saved me hours of work. I now generate top-tier captions in a fraction of the time.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
-      name: "Emily Davis",
-      role: "Influencer",
-      text: "Finally, a tool that understands Instagram content creation. Love using AI4Insta!",
-      rating: 5,
+      name: "Priya Patel",
+      role: "Red Flag  (Influencer)",
+      text: "Honestly, this tool doesn’t understand the 'chaos' of Instagram. But hey, at least it tries to be creative. *insert eye roll*",
+      rating: 4,
       image: "https://randomuser.me/api/portraits/women/2.jpg"
     },
     {
-      name: "John Smith",
+      name: "Siddharth Verma",
       role: "Digital Marketer",
-      text: "The AI tools have helped me increase engagement by 200%. Amazing results!",
+      text: "AI4Insta is a game-changer! I’ve been able to boost engagement with just a few clicks.",
       rating: 5,
       image: "https://randomuser.me/api/portraits/men/2.jpg"
+    },
+    {
+      name: "Isabella Clark",
+      role: "Blogger",
+      text: "I absolutely love how AI4Insta helps me craft the perfect captions that resonate with my followers. So easy to use!",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/3.jpg"
+    },
+    {
+      name: "Vishal Singh",
+      role: "Gully Boy (Content Creator)",
+      text: "Yo! This tool just gets me. My captions are hitting the right vibe now. I’m all about real talk, and AI4Insta nails it every time.",
+      rating: 4,
+      image: "https://randomuser.me/api/portraits/men/3.jpg"
+    },
+    {
+      name: "Aishwarya Reddy",
+      role: "Brand Strategist",
+      text: "AI4Insta is exactly what I needed. It streamlines my content creation process and helps me stay ahead of the curve.",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/4.jpg"
+    },
+    {
+      name: "Manish Yadav",
+      role: "Entrepreneur",
+      text: "This tool has been a huge time-saver. The AI-generated captions are spot-on and truly engage my audience.",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/men/4.jpg"
+    },
+    {
+      name: "Simran Kaur",
+      role: "Fashion Blogger",
+      text: "AI4Insta helps me stay on top of my content. The captions add the perfect touch to my fashion posts. Highly recommended!",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/women/5.jpg"
+    },
+    {
+      name: "Ravi Chaudhary",
+      role: "Content Strategist",
+      text: "I was skeptical at first, but AI4Insta’s captions have been consistently on-point. It’s improved my audience engagement by leaps.",
+      rating: 5,
+      image: "https://randomuser.me/api/portraits/men/5.jpg"
     }
   ];
+  
+  
 
   return (
     <section className="py-16 md:py-20 px-4 bg-gradient-to-br from-white to-purple-50 dark:from-gray-900 dark:to-purple-900/10">
