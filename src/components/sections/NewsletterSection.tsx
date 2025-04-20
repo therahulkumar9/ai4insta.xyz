@@ -1,12 +1,13 @@
-
 import { motion } from "framer-motion";
 import { Mail, Send } from "lucide-react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 export const NewsletterSection = () => {
   const { toast } = useToast();
+  const [email, setEmail] = useState(""); // State for the input value
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,6 +15,8 @@ export const NewsletterSection = () => {
       title: "Success!",
       description: "Thank you for subscribing to our newsletter!",
     });
+
+    setEmail(""); // Clear the input after submission
   };
 
   return (
@@ -59,6 +62,8 @@ export const NewsletterSection = () => {
                 placeholder="Enter your email"
                 className="w-full pl-4 pr-10 py-3 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm border-gray-200 dark:border-gray-700 focus:border-purple-500 dark:focus:border-purple-400"
                 required
+                value={email} // Bind the input to the email state
+                onChange={(e) => setEmail(e.target.value)} // Update the email state
               />
               <Mail className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
             </div>
