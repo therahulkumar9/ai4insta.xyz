@@ -17,3 +17,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ai4insta.xyz/sitemap.xml
+
+User-agent: Googlebot
+Allow: /sitemap.xml
