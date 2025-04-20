@@ -16,7 +16,8 @@
       { "source": "/terms", "destination": "/index.html" },
       { "source": "/terms/:path*", "destination": "/index.html" },
       { "source": "/instagram", "destination": "/index.html" },
-      { "source": "/instagram/:path*", "destination": "/index.html" }
+      { "source": "/instagram/:path*", "destination": "/index.html" },
+      { "source": "/:path*", "destination": "/index.html" }
     ]
   }
   
