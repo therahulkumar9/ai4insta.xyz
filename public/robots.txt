@@ -1,22 +1,26 @@
+# Allow Googlebot to crawl all pages
 User-agent: Googlebot
 Allow: /
 
+# Allow Bingbot to crawl all pages
 User-agent: Bingbot
 Allow: /
 
+# Allow Twitterbot to crawl all pages
 User-agent: Twitterbot
 Allow: /
 
+# Allow Facebook's external hit to crawl all pages
 User-agent: facebookexternalhit
 Allow: /
 
+# Allow all other bots to crawl all pages
 User-agent: *
 Allow: /
 
-User-agent: *
-Allow: /
-
-Sitemap: https://ai4insta.xyz/sitemap.xml
-
+# Explicitly allow Googlebot to crawl the sitemap
 User-agent: Googlebot
 Allow: /sitemap.xml
+
+# Sitemap location
+Sitemap: https://ai4insta.xyz/sitemap.xml
