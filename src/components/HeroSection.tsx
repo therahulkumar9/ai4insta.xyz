@@ -22,13 +22,12 @@ export const HeroSection = () => {
           </h1>
         </div>
         
-        <h2 className="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800 dark:text-gray-100">
-          Say goodbye to caption writer's block
+        <h2 className="text-xl sm:text-xl md:text-2xl lg:text-2xl font-semibold text-gray-800 dark:text-gray-100">
+        Your all-in-one AI website for Instagram reach, style, and success.
         </h2>
         
         <p className="text-lg sm:text-base md:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          AI4Insta crafts captions, hashtags & tone — you just post it! Generate viral-ready Instagram captions in seconds using AI.
-        </p>
+        AI4Insta generates captions, hashtags, bios, and more — just post it! Create viral-ready content in seconds with AI.       </p>
 
         <Button 
           onClick={handleGetStarted}
