@@ -1,8 +1,7 @@
+// generate-sitemap.mjs
 import { writeFileSync } from 'node:fs';
 import { SitemapStream, streamToPromise } from 'sitemap';
-import path from 'node:path';
 
-// Define the hostname and sitemap URL data
 const hostname = 'https://ai4insta.xyz';
 
 const links = [
@@ -17,31 +16,15 @@ const links = [
   { url: '/instagram', changefreq: 'weekly', priority: 0.7 }
 ];
 
-// Ensure the sitemap is generated properly
-const generateSitemap = async () => {
-  try {
-    const sitemapStream = new SitemapStream({ hostname });
+const sitemapStream = new SitemapStream({ hostname });
 
-    // Write URLs to sitemap stream
-    for (const link of links) {
-      sitemapStream.write(link);
-    }
+for (const link of links) {
+  sitemapStream.write(link);
+}
 
-    // Close the stream and get the result
-    sitemapStream.end();
-    const sitemap = await streamToPromise(sitemapStream);
+sitemapStream.end();
 
-    // Define the output file path (ensure the 'public' folder exists)
-    const outputFilePath = path.resolve('public', 'sitemap.xml');
+const sitemap = await streamToPromise(sitemapStream);
+writeFileSync('./public/sitemap.xml', sitemap.toString());
 
-    // Write the generated sitemap to the 'public/sitemap.xml' file
-    writeFileSync(outputFilePath, `<?xml version="1.0" encoding="UTF-8"?>\n${sitemap.toString()}`);
-
-    console.log(`✅ sitemap.xml generated successfully at ${outputFilePath}`);
-  } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-  }
-};
-
-// Run the sitemap generation function
-generateSitemap();
+console.log('✅ sitemap.xml generated successfully!');
