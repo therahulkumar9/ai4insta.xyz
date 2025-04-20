@@ -1,33 +1,30 @@
 // generate-sitemap.mjs
-import { writeFileSync, createWriteStream } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import { SitemapStream, streamToPromise } from 'sitemap';
-import { createGzip } from 'node:zlib';
 
 const hostname = 'https://ai4insta.xyz';
 
-const sitemap = new SitemapStream({ hostname });
-const writeStream = createWriteStream('./public/sitemap.xml.gz');
-sitemap.pipe(createGzip()).pipe(writeStream);
-
-const routes = [
-  '/',
-  '/youtube',
-  '/insta-caption-ai',
-  '/contact',
-  '/features',
-  '/pricing',
-  '/privacy',
-  '/terms',
-  '/instagram'
+const links = [
+  { url: '/', changefreq: 'weekly', priority: 1.0 },
+  { url: '/youtube', changefreq: 'weekly', priority: 0.8 },
+  { url: '/insta-caption-ai', changefreq: 'weekly', priority: 0.8 },
+  { url: '/contact', changefreq: 'monthly', priority: 0.5 },
+  { url: '/features', changefreq: 'monthly', priority: 0.5 },
+  { url: '/pricing', changefreq: 'monthly', priority: 0.5 },
+  { url: '/privacy', changefreq: 'yearly', priority: 0.3 },
+  { url: '/terms', changefreq: 'yearly', priority: 0.3 },
+  { url: '/instagram', changefreq: 'weekly', priority: 0.7 }
 ];
 
-for (const url of routes) {
-  sitemap.write({ url, changefreq: 'weekly', priority: 0.8 });
+const sitemapStream = new SitemapStream({ hostname });
+
+for (const link of links) {
+  sitemapStream.write(link);
 }
 
-sitemap.end();
+sitemapStream.end();
 
-const sitemapXML = await streamToPromise(sitemap);
-writeFileSync('./public/sitemap.xml', sitemapXML.toString());
+const sitemap = await streamToPromise(sitemapStream);
+writeFileSync('./public/sitemap.xml', sitemap.toString());
 
-console.log('✅ Sitemap generated successfully!');
+console.log('✅ sitemap.xml generated successfully!');
