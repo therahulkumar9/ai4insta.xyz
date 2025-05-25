@@ -38,7 +38,7 @@ export const FeaturedToolSection = () => {
               icon={
                 <Hash className="w-7 h-7 text-purple-600 dark:text-purple-400" />
               }
-              comingSoonDate="Coming on 26th April"
+              comingSoonDate="Coming on 26th June"
             />
 
           </a>
